@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+## Test Dataset
 
-You can use the [editor on GitHub](https://github.com/VisionSystemsInc/open-sentinel-map/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Test Dataset contains something or other. It is described in [this paper](https://lmgtfy.app/?q=todo).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![this is an overview image](/img/logo_small.png)
 
-### Markdown
+### Download Instructions
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Download using [this link.](https://lmgtfy.app/?q=todo)
 
-```markdown
-Syntax highlighted code block
+### Data Format
 
-# Header 1
-## Header 2
-### Header 3
+The data has the following structure.
 
-- Bulleted
-- List
+### Licenses
 
-1. Numbered
-2. List
+Data is licensed under XXX.
 
-**Bold** and _Italic_ and `Code` text
+Data is made available as-is, etc.
 
-[Link](url) and ![Image](src)
-```
+Access to Sentinel data is free, full and open for the broad Regional, National, European and International user community. View [Terms and Conditions](https://scihub.copernicus.eu/twiki/do/view/SciHubWebPortal/TermsConditions).
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+OpenStreetMap® is _open data_, licensed under the [Open Data Commons Open Database License](https://opendatacommons.org/licenses/odbl/) (ODbL) by the [OpenStreetMap Foundation](https://wiki.osmfoundation.org/wiki/Main_Page) (OSMF).
 
-### Jekyll Themes
+TODO: Do we also have to use the ODbL? Is this work a "derivative database"? Unclear.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/VisionSystemsInc/open-sentinel-map/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Contact
 
-### Support or Contact
+[email](mailto:fake-email@gmail.com)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### How to Cite
+
+Foo, Bar.
+
+### Acknowledgements
+
+This work was done with the support of XXX.
