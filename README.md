@@ -1,8 +1,8 @@
-## Test Dataset
+## OpenSentinelMap
 
-Test Dataset contains something or other. It is described in [this paper](https://lmgtfy.app/?q=todo).
+The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel OpenStreetMap label masks. It is described in [this paper](https://lmgtfy.app/?q=todo).
 
-![this is an overview image](/img/logo_small.png)
+![this is an overview image](/img/dataset_teaser.png)
 
 ### Download Instructions
 
@@ -10,7 +10,7 @@ Download using [this link.](https://lmgtfy.app/?q=todo)
 
 ### Data Format
 
-The data has the following structure.
+The data is broken up into years from 2017 to 2020.
 
 ### Licenses
 
@@ -26,7 +26,7 @@ TODO: Do we also have to use the ODbL? Is this work a "derivative database"? Unc
 
 ### Contact
 
-[email](mailto:fake-email@gmail.com)
+[email](mailto:noah.rego.johnson@gmail.com)
 
 ### How to Cite
 
