@@ -11,11 +11,21 @@ To download the entire dataset to your current directory via the command line, r
 aws s3 cp s3://vsi-open-sentinel-map/ . --recursive --request-payer
 ```
 
-Your AWS profile will be charged around $10.
+Amazon will charge your AWS profile around $10 in data transfer fees.
 
 ### Data Format
 
-The data is broken up into years from 2017 to 2020. Each 
+The data is broken up into years from 2017 to 2020. Each year's worth of Sentinel imagery is compressed into a osm_sentinel_imagery_{YEAR}.tgz file. These files can be untarred using the following command.
+```
+tar -xvzf osm_sentinel_imagery_{YEAR}.tgz
+```
+The untarred folders of sentinel imagery will have the format
+```
+YEAR/
+    MGRS_TILE/
+        {ID}.npz
+```
+where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. The bands are grouped by resolution, and accessible using the key gsd_{RESOLUTION} (i.e. gsd_10, gsd_20, gsd_60).
 
 ### Download Instructions
 
@@ -50,15 +60,15 @@ TODO: Do we also have to use the ODbL? Is this work a "derivative database"? Unc
 
 ### How to Cite
 
-Latex:
+bibtex:
 ```
-@InProceedings{Nguyen_2021_CVPR,
-    author    = {Nguyen, Ngoc Long and Anger, Jeremy and Davy, Axel and Arias, Pablo and Facciolo, Gabriele},
-    title     = {Self-Supervised Multi-Image Super-Resolution for Push-Frame Satellite Images},
+@InProceedings{Johnson_2022_CVPR,
+    author    = {Johnson, Noah and Treible, Wayne and Crispell, Daniel},
+    title     = {OpenSentinelMap: A Large-Scale Land Use Dataset using OpenStreetMap and Sentinel-2 Imagery},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
     month     = {June},
-    year      = {2021},
-    pages     = {1121-1131}
+    year      = {2022},
+    pages     = {XXX-XXX}
 }
 ```
 
