@@ -21,11 +21,11 @@ tar -xvzf osm_sentinel_imagery_{YEAR}.tgz
 ```
 The untarred folders of sentinel imagery will have the format
 ```
-YEAR/
-    MGRS_TILE/
-        {ID}.npz
+MGRS_TILE/
+    SPATIAL_CELL/
+        {ID}_{YEAR}.npz
 ```
-where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. The bands are grouped by resolution, and accessible using the key gsd_{RESOLUTION} (i.e. gsd_10, gsd_20, gsd_60).
+where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. The bands are grouped by resolution, and accessible using the key gsd_{RESOLUTION} (i.e. "gsd_10", "gsd_20", "gsd_60").
 
 ### Download Instructions
 
