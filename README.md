@@ -8,10 +8,10 @@ The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel OpenStreet
 
 To download the entire dataset to your current directory via the command line, run the following:
 ```
-aws s3 cp s3://vsi-open-sentinel-map/ . --recursive --request-payer
+aws s3 cp s3://vsi-open-sentinel-map/ ./open-sentinel-map --recursive --request-payer
 ```
 
-Amazon will charge your AWS profile around $10 in data transfer fees.
+The dataset is about 445 GB in total. Amazon will charge your AWS profile about $40 (at 9 cents a GB) in data transfer fees.
 
 ### Data Format
 
