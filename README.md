@@ -40,7 +40,7 @@ aws s3 ls s3://vsi-open-sentinel-map/ --request-payer
 
 aws s3 cp s3://vsi-open-sentinel-map/osm_categories_v10.json . --request-payer
 
-TODO: Download using [this OneDrive link.](https://lmgtfy.app/?q=todo)
+TODO: Download from [this SharePoint folder.](https://vsi.sharepoint.us/:f:/s/PublicShare/EnWfIp2gvi1As4tTZPzg1RcBYjtczFII9oWkU3MlbMDF9A?e=SYrIga)
 
 ### Licenses
 
