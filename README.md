@@ -27,13 +27,13 @@ MGRS_TILE/
 ```
 where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. The bands are grouped by resolution, and accessible using the key gsd_{RESOLUTION} (i.e. "gsd_10", "gsd_20", "gsd_60").
 
-The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd_20" bands have 4 vegetation red edge bands, followed by two SWIR bands. The "gsd_60" bands are coastal aerosol, and water vapour. The exact corresponding bands from the Sentinel-2 platform are listed in the below table.
+The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd_20" bands have 4 vegetation red edge bands, followed by two SWIR bands. The "gsd_60" array consists of the coastal aerosol and water vapour bands. The exact corresponding bands from the Sentinel-2 platform are listed in the below table. Find more information about these spectral bands [here](https://gisgeography.com/sentinel-2-bands-combinations/).
 
 | Data Key | Sentinel-2 Bands |
 | -------- | ---------------- |
-| gsd_10   | 'B02', 'B03', 'B04', 'B08' |
-| gsd_20   | 'B05', 'B06', 'B07', 'B8A', 'B11', 'B12' |
-| gsd_60   | 'B01', 'B09' |
+| gsd_10   | B02, B03, B04, B08 |
+| gsd_20   | B05, B06, B07, B8A, B11, B12 |
+| gsd_60   | B01, B09 |
 
 ### Download Instructions
 
