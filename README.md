@@ -6,7 +6,9 @@ The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel OpenStreet
 
 ### Quick Start
 
-To download the entire dataset to your current directory via the command line, run the following:
+[SharePoint link](https://vsi.sharepoint.us/:f:/r/sites/PublicShare/Shared%20Documents/vsi-open-sentinel-map?csf=1&web=1&e=od0eHA)
+
+Or use the following command to download from AWS S3.
 ```
 aws s3 cp s3://vsi-open-sentinel-map/ ./open-sentinel-map --recursive --request-payer
 ```
