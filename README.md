@@ -4,16 +4,15 @@ The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel OpenStreet
 
 ![this is an overview image](/img/dataset_teaser.png)
 
-### Quick Start
+### Data Access
 
-[SharePoint link](https://vsi.sharepoint.us/:f:/r/sites/PublicShare/Shared%20Documents/vsi-open-sentinel-map?csf=1&web=1&e=od0eHA)
+The dataset may be freely downloaded from [SharePoint](https://vsi.sharepoint.us/:f:/s/PublicShare/EnWfIp2gvi1As4tTZPzg1RcBYjtczFII9oWkU3MlbMDF9A).
 
-Or use the following command to download from AWS S3.
+As a backup option, or for faster download speeds, the dataset is also available on Amazon S3. You can use the following command to download it, but beware that Amazon will charge your AWS profile about $40 in data transfer fees (about 9 cents a GB for 445 GB in total).
+
 ```
 aws s3 cp s3://vsi-open-sentinel-map/ ./open-sentinel-map --recursive --request-payer
 ```
-
-The dataset is about 445 GB in total. Amazon will charge your AWS profile about $40 (at 9 cents a GB) in data transfer fees.
 
 ### Data Format
 
@@ -27,7 +26,7 @@ MGRS_TILE/
     SPATIAL_CELL/
         {ID}_{YEAR}.npz
 ```
-where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. The bands are grouped by resolution, and accessible using the key gsd_{RESOLUTION} (i.e. "gsd_10", "gsd_20", "gsd_60").
+where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. The bands are grouped by spatial resolution, and accessible using the key "gsd_{RESOLUTION}" (i.e. "gsd_10", "gsd_20", "gsd_60").
 
 The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd_20" bands have 4 vegetation red edge bands, followed by two SWIR bands. The "gsd_60" array consists of the coastal aerosol and water vapour bands. The exact corresponding bands from the Sentinel-2 platform are listed in the below table. Find more information about these spectral bands [here](https://gisgeography.com/sentinel-2-bands-combinations/).
 
@@ -37,36 +36,17 @@ The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd
 | gsd_20   | B05, B06, B07, B8A, B11, B12 |
 | gsd_60   | B01, B09 |
 
-### Download Instructions
-
-Make sure you have the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) installed.
-
-Configure your default AWS profile. If you wish to use the non-default, add the "--profile YOUR_PROFILE" option to all of the following aws commands.
-
-View all files within the S3 bucket containing the dataset using the following command:
-```
-aws s3 ls s3://vsi-open-sentinel-map/ --request-payer
-```
-
-aws s3 cp s3://vsi-open-sentinel-map/osm_categories_v10.json . --request-payer
-
-TODO: Download from [this SharePoint folder.](https://vsi.sharepoint.us/:f:/s/PublicShare/EnWfIp2gvi1As4tTZPzg1RcBYjtczFII9oWkU3MlbMDF9A?e=SYrIga)
-
 ### Licenses
 
-Data is licensed under XXX.
-
-Data is made available as-is, etc.
+Data is made available as-is.
 
 Access to Sentinel data is free, full and open for the broad Regional, National, European and International user community. View [Terms and Conditions](https://scihub.copernicus.eu/twiki/do/view/SciHubWebPortal/TermsConditions).
 
 OpenStreetMap® is _open data_, licensed under the [Open Data Commons Open Database License](https://opendatacommons.org/licenses/odbl/) (ODbL) by the [OpenStreetMap Foundation](https://wiki.osmfoundation.org/wiki/Main_Page) (OSMF).
 
-TODO: Do we also have to use the ODbL? Is this work a "derivative database"? Unclear.
-
 ### Contact
 
-[email](mailto:noah.rego.johnson@gmail.com)
+[email](mailto:dan@visionsystemsinc.com)
 
 ### How to Cite
 
@@ -74,11 +54,11 @@ bibtex:
 ```
 @InProceedings{Johnson_2022_CVPR,
     author    = {Johnson, Noah and Treible, Wayne and Crispell, Daniel},
-    title     = {OpenSentinelMap: A Large-Scale Land Use Dataset using OpenStreetMap and Sentinel-2 Imagery},
+    title     = {OpenSentinelMap: A Large-Scale Land Use Dataset Using OpenStreetMap and Sentinel-2 Imagery},
     booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
     month     = {June},
     year      = {2022},
-    pages     = {XXX-XXX}
+    pages     = {1333-1341}
 }
 ```
 
