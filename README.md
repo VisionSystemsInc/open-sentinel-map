@@ -1,7 +1,6 @@
 ## OpenSentinelMap
 
-The OpenSentinelMap dataset contains Sentinel-2 imagery and semantic labels derived from OpenStreetMap
-per-pixel OpenStreetMap label masks. It is described in [this paper](https://lmgtfy.app/?q=todo).
+The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel semantic label masks derived from OpenStreetMap. It is described in [this paper](https://openaccess.thecvf.com/content/CVPR2022W/EarthVision/papers/Johnson_OpenSentinelMap_A_Large-Scale_Land_Use_Dataset_Using_OpenStreetMap_and_Sentinel-2_CVPRW_2022_paper.pdf).
 
 ![this is an overview image](/img/dataset_teaser.png)
 
