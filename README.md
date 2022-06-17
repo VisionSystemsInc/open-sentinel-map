@@ -45,6 +45,8 @@ The label images can be untarred using the command
 tar -xvzf osm_label_images.tgz
 ```
 
+These images are in PNG format, with label values as described in the osm_categories.json file.
+
 #### Auxiliary Data
 
 The spatial_cell_info CSV file contains metadata for each spatial cell: the lon/lat bounds, the MGRS tile it is within, and the training split it belongs to. Note that the current data split was performed at the MGRS tile level to prevent data leakage. Use caution if performing your own train/test split.
