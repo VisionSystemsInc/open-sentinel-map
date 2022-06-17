@@ -46,6 +46,12 @@ The label images can be untarred using the command
 tar -xvzf osm_label_images.tgz
 ```
 
+#### Auxiliary Data
+
+The spatial_cell_info CSV file contains metadata for each spatial cell: the lon/lat bounds, the MGRS tile it is within, and the training split it belongs to. Note that the current data split was performed at the MGRS tile level to prevent data leakage. Use caution if performing your own train/test split.
+
+The osm_categories JSON file details the exact mapping from OpenStreetMap tags to OpenSentinelMap labels.
+
 ### Licenses
 
 Data is made available as-is.
