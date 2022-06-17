@@ -1,6 +1,7 @@
 ## OpenSentinelMap
 
-The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel OpenStreetMap label masks. It is described in [this paper](https://lmgtfy.app/?q=todo).
+The OpenSentinelMap dataset contains Sentinel-2 imagery and semantic labels derived from OpenStreetMap
+per-pixel OpenStreetMap label masks. It is described in [this paper](https://lmgtfy.app/?q=todo).
 
 ![this is an overview image](/img/dataset_teaser.png)
 
@@ -15,6 +16,8 @@ aws s3 cp s3://vsi-open-sentinel-map/ ./open-sentinel-map --recursive --request-
 ```
 
 ### Data Format
+
+#### Imagery
 
 The data is broken up into years from 2017 to 2020. Each year's worth of Sentinel imagery is compressed into a osm_sentinel_imagery_{YEAR}.tgz file. These files can be untarred using the following command.
 ```
@@ -35,6 +38,13 @@ The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd
 | gsd_10   | B02, B03, B04, B08 |
 | gsd_20   | B05, B06, B07, B8A, B11, B12 |
 | gsd_60   | B01, B09 |
+
+#### Annotations
+
+The label images can be untarred using the command
+```
+tar -xvzf osm_label_images.tgz
+```
 
 ### Licenses
 
