@@ -18,7 +18,7 @@ aws s3 cp s3://vsi-open-sentinel-map/ ./open-sentinel-map --recursive --request-
 
 #### Imagery
 
-The data is broken up into years from 2017 to 2020. Each year's worth of Sentinel imagery is compressed into a osm_sentinel_imagery_{YEAR}.tgz file. These files can be untarred using the following command.
+Image data is separated by year from 2017 to 2020. Each year's worth of Sentinel imagery is compressed into a osm_sentinel_imagery_{YEAR}.tgz file. These files can be untarred using the following command.
 ```
 tar -xvzf osm_sentinel_imagery_{YEAR}.tgz
 ```
@@ -55,7 +55,7 @@ The osm_categories JSON file details the exact mapping from OpenStreetMap tags t
 
 ### Licenses
 
-Data is made available as-is.
+This dataset is made available under the MIT license, freely available for both academic and commercial use.
 
 Access to Sentinel data is free, full and open for the broad Regional, National, European and International user community. View [Terms and Conditions](https://scihub.copernicus.eu/twiki/do/view/SciHubWebPortal/TermsConditions).
 
