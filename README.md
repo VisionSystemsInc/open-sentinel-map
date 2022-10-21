@@ -57,10 +57,6 @@ The spatial_cell_info CSV file contains metadata for each spatial cell: the lon/
 
 The osm_categories JSON file details the exact mapping from OpenStreetMap tags to OpenSentinelMap labels.
 
-#### Bad Data Band
-
- 
-
 ### Licenses
 
 This dataset is made available under the MIT license, freely available for both academic and commercial use.
