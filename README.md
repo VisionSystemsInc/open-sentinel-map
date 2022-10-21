@@ -28,7 +28,7 @@ MGRS_TILE/
     SPATIAL_CELL/
         {ID}_{YEAR}.npz
 ```
-where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. The bands are grouped by spatial resolution, and accessible using the key "gsd_{RESOLUTION}" (i.e. "gsd_10", "gsd_20", "gsd_60").
+where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. This file can be loaded from python using the numpy.load function, and the bands accessed via their keys. The bands are grouped by spatial resolution, and accessible using the key "gsd_{RESOLUTION}" (i.e. "gsd_10", "gsd_20", "gsd_60").
 
 The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd_20" bands have 4 vegetation red edge bands, followed by two SWIR bands. The "gsd_60" array consists of the coastal aerosol and water vapour bands. The exact corresponding bands from the Sentinel-2 platform are listed in the below table. Find more information about these spectral bands [here](https://gisgeography.com/sentinel-2-bands-combinations/).
 
@@ -37,6 +37,10 @@ The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd
 | gsd_10   | B02, B03, B04, B08 |
 | gsd_20   | B05, B06, B07, B8A, B11, B12 |
 | gsd_60   | B01, B09 |
+
+The image files also contain an "scl" band and a "bad_percent" value. The "scl" band contains the Scene Classification Layer values, which provides information of the quality of each pixel at 20 m. resolution. These values are described in Figure 3 [here](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm).
+
+The "bad_percent" value is a float value between 0 and 1 which describes the percentage of pixels within the "scl" band which we've determined to be bad data. Currently we include images with up to 25% bad data. You can use this key to filter the dataset using a lower threshold.
 
 #### Annotations
 
@@ -52,6 +56,10 @@ These images are in PNG format, with label values as described in the osm_catego
 The spatial_cell_info CSV file contains metadata for each spatial cell: the lon/lat bounds, the MGRS tile it is within, and the training split it belongs to. Note that the current data split was performed at the MGRS tile level to prevent data leakage. Use caution if performing your own train/test split.
 
 The osm_categories JSON file details the exact mapping from OpenStreetMap tags to OpenSentinelMap labels.
+
+#### Bad Data Band
+
+ 
 
 ### Licenses
 
