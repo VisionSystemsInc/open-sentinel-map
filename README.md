@@ -38,7 +38,7 @@ The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd
 | gsd_20   | B05, B06, B07, B8A, B11, B12 |
 | gsd_60   | B01, B09 |
 
-The image files also contain an "scl" band and a "bad_percent" value. The "scl" band contains the Scene Classification Layer values, which provides information of the quality of each pixel at 20 m. resolution. These values are described in Figure 3 [here](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm).
+The image files also contain an "scl" band and a "bad_percent" value. The "scl" band contains the Scene Classification Layer values, which inform the quality of each pixel at 20 m. resolution. These values are described in Figure 3 [here](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm).
 
 The "bad_percent" value is a float value between 0 and 1 which describes the percentage of pixels within the "scl" band which we've determined to be bad data. Currently we include images with up to 25% bad data. You can use this key to filter the dataset using a lower threshold.
 
