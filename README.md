@@ -30,6 +30,8 @@ MGRS_TILE/
 ```
 where each .npz file is a compressed numpy file containing the 32-bit float Bottom-of-Atmosphere imagery data. This file can be loaded from python using the numpy.load function, and the bands accessed via their keys. The bands are grouped by spatial resolution, and accessible using the key "gsd_{RESOLUTION}" (i.e. "gsd_10", "gsd_20", "gsd_60").
 
+Note: The original Sentinel-2 data is stored as unsigned 16-bit integers. Our dataset converts to 32-bit floats and applies the Sentinel-2 scaling factor (divison by 10,000) to retrieve surface reflectance values. Although this should result in values from 0 to 1, some values will exceed 1 due to small errors in the data. We decided to keep these values greater than 1 for training robustness.
+
 The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd_20" bands have 4 vegetation red edge bands, followed by two SWIR bands. The "gsd_60" array consists of the coastal aerosol and water vapour bands. The exact corresponding bands from the Sentinel-2 platform are listed in the below table. Find more information about these spectral bands [here](https://gisgeography.com/sentinel-2-bands-combinations/).
 
 | Data Key | Sentinel-2 Bands |
