@@ -8,15 +8,10 @@ The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel semantic l
 
 The dataset may be freely downloaded from SharePoint [here.](https://vsi.sharepoint.us/:f:/s/PublicShare/EnWfIp2gvi1As4tTZPzg1RcBYjtczFII9oWkU3MlbMDF9A)
 
-As a backup option, or for faster download speeds, the dataset is also available on Amazon S3. You can use the following command to download it, but beware that Amazon will charge your AWS profile about $40 in data transfer fees (about 9 cents a GB, and 445 GB in total).
+As a backup option, or for faster download speeds, the dataset is also available on Amazon S3. You can use the following command to download it, but beware that Amazon will charge your AWS profile about $40 in data transfer fees (about 9 cents a GB, and 445 GB in total). NOTE: This option will be deprecated soon in favor of Azure Blob Storage.
 
 ```
 aws s3 cp s3://vsi-open-sentinel-map/ ./open-sentinel-map --recursive --request-payer
-```
-
-For the resampled EuroSAT-Sentinel2 dataset:
-```
-aws s3 cp s3://vsi-open-sentinel-map/EuroSAT_sentinel2.tar.gz ./EuroSAT_sentinel2.tar.gz --request-payer
 ```
 
 ### Data Format
