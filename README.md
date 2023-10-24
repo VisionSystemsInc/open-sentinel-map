@@ -14,6 +14,11 @@ As a backup option, or for faster download speeds, the dataset is also available
 aws s3 cp s3://vsi-open-sentinel-map/ ./open-sentinel-map --recursive --request-payer
 ```
 
+For the resampled EuroSAT-Sentinel2 dataset:
+```
+aws s3 cp s3://vsi-open-sentinel-map/EuroSAT_sentinel2.tar.gz ./EuroSAT_sentinel2.tar.gz --request-payer
+```
+
 ### Data Format
 
 #### Imagery
