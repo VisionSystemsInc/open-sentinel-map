@@ -26,7 +26,7 @@ The dataset may be freely downloaded from Azure Blob Storage:
 [OSM Sentinel Imagery 2020](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_sentinel_imagery_2020.tgz)
 
 
-[EuroSAT Sentinel Resamples](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/EuroSAT_sentinel2.tar.gz)
+[EuroSAT Sentinel L2A Resamples](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/EuroSAT_sentinel2.tar.gz)
 
 
 #### AWS (Paid)
