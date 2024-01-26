@@ -14,7 +14,7 @@ The dataset may be freely downloaded from Azure Blob Storage:
 
 [OSM Label Categories](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_categories.json)
 
-[OSM Label Images](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_label_images.tgz)
+[OSM Rasterized Label Images](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_label_images.tgz)
 
 
 [OSM Sentinel Imagery 2017](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_sentinel_imagery_2017.tgz)
