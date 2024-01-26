@@ -9,14 +9,22 @@ The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel semantic l
 ## Azure Blob Storage (Free)
 
 The dataset may be freely downloaded from Azure Blob Storage:
+
 [Spatial Cell Metadata](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/spatial_cell_info.csv)
+
 [OSM Label Categories](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_categories.json)
+
 [OSM Label Images](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_label_images.tgz)
 
+
 [OSM Sentinel Imagery 2017](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_sentinel_imagery_2017.tgz)
+
 [OSM Sentinel Imagery 2018](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_sentinel_imagery_2018.tgz)
+
 [OSM Sentinel Imagery 2019](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_sentinel_imagery_2019.tgz)
+
 [OSM Sentinel Imagery 2020](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/osm_sentinel_imagery_2020.tgz)
+
 
 [EuroSAT Sentinel Resamples](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/EuroSAT_sentinel2.tar.gz)
 
