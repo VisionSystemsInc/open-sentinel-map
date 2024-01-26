@@ -6,7 +6,7 @@ The OpenSentinelMap dataset contains Sentinel-2 imagery and per-pixel semantic l
 
 ### Data Access
 
-## Azure Blob Storage (Free)
+#### Azure Blob Storage (Free)
 
 The dataset may be freely downloaded from Azure Blob Storage:
 
@@ -29,7 +29,7 @@ The dataset may be freely downloaded from Azure Blob Storage:
 [EuroSAT Sentinel Resamples](https://vsipublic.blob.core.usgovcloudapi.net/vsi-open-sentinel-map/EuroSAT_sentinel2.tar.gz)
 
 
-## AWS (Paid)
+#### AWS (Paid)
 
 As a backup option, or for faster download speeds, the dataset is also available on Amazon S3. You can use the following command to download it, but beware that Amazon will charge your AWS profile about $40 in data transfer fees (about 9 cents a GB, and 445 GB in total). NOTE: This option will be deprecated soon in favor of Azure Blob Storage.
 
