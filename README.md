@@ -63,7 +63,7 @@ The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd
 | gsd_20   | B05, B06, B07, B8A, B11, B12 |
 | gsd_60   | B01, B09 |
 
-The image files contain an "scl" band and a . The "scl" band contains the Scene Classification Layer values, which inform the quality of each pixel at 20 m. resolution. These valures are described in the table below.
+In addition to the "gsd_*" bands, the image files contain an "scl" band. The "scl" band contains the Scene Classification Layer values, which inform the quality of each pixel at 20 m. resolution. These values are described in the table below.
 
 | Label | Classification           |
 | ----- | --------------           |
@@ -80,7 +80,7 @@ The image files contain an "scl" band and a . The "scl" band contains the Scene 
 | 10    | THIN_CIRRUS              |
 | 11    | SNOW or ICE              |
 
-The image files also contain a "bad_percent" value, which is a float value between 0 and 1 describing the percentage of pixels within the "scl" band which we've determined to be bad data. Currently we filter images with more than 25% of their pixels having bad data. You can use this key to filter the dataset using a different threshold.
+The image files also contain a "bad_percent" key, which is a float value between 0 and 1 describing the percentage of pixels within the "scl" band which we've determined to be bad data. Currently we filter images with more than 25% of their pixels having bad data. You can use this key to filter the dataset using a different threshold.
 
 #### Annotations
 
