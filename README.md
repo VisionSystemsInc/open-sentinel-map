@@ -55,7 +55,7 @@ where each .npz file is a compressed numpy file containing the 32-bit float Bott
 
 Note: The original Sentinel-2 data is stored as unsigned 16-bit integers. Our dataset converts to 32-bit floats and applies the Sentinel-2 scaling factor (divison by 10,000) to retrieve surface reflectance values. Although this should result in values from 0 to 1, some values will exceed 1 due to small errors in the data. We decided to keep these values greater than 1 for training robustness.
 
-The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd_20" bands have 4 vegetation red edge bands, followed by two SWIR bands. The "gsd_60" array consists of the coastal aerosol and water vapour bands. The exact corresponding bands from the Sentinel-2 platform are listed in the below table. Find more information about these spectral bands [here](https://gisgeography.com/sentinel-2-bands-combinations/).
+The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd_20" bands have 4 vegetation red edge bands, followed by two SWIR bands. The "gsd_60" array consists of the coastal aerosol and water vapour bands. The exact corresponding bands from the Sentinel-2 platform are listed in the table below. Find more information about these spectral bands [here](https://gisgeography.com/sentinel-2-bands-combinations/).
 
 | Data Key | Sentinel-2 Bands |
 | -------- | ---------------- |
@@ -63,9 +63,24 @@ The "gsd_10" array bands have the order blue, green, red, and then NIR. The "gsd
 | gsd_20   | B05, B06, B07, B8A, B11, B12 |
 | gsd_60   | B01, B09 |
 
-The image files also contain an "scl" band and a "bad_percent" value. The "scl" band contains the Scene Classification Layer values, which inform the quality of each pixel at 20 m. resolution. These values are described in Figure 3 [here](https://sentinels.copernicus.eu/web/sentinel/technical-guides/sentinel-2-msi/level-2a/algorithm).
+The image files contain an "scl" band and a . The "scl" band contains the Scene Classification Layer values, which inform the quality of each pixel at 20 m. resolution. These valures are described in the table below.
 
-The "bad_percent" value is a float value between 0 and 1 which describes the percentage of pixels within the "scl" band which we've determined to be bad data. Currently we include images with up to 25% bad data. You can use this key to filter the dataset using a lower threshold.
+| Label | Classification           |
+| ----- | --------------           |
+| 0     | NO_DATA                  |
+| 1     | SATURATED_OR_DEFECTIVE   |
+| 2     | CAST_SHADOWS             |
+| 3     | CLOUD_SHADOWS            |
+| 4     | VEGETATION               |
+| 5     | NOT_VEGETATED            |
+| 6     | WATER                    |
+| 7     | UNCLASSIFIED             |
+| 8     | CLOUD_MEDIUM_PROBABILITY |
+| 9     | CLOUD_HIGH_PROBABILITY   |
+| 10    | THIN_CIRRUS              |
+| 11    | SNOW or ICE              |
+
+The image files also contain a "bad_percent" value, which is a float value between 0 and 1 describing the percentage of pixels within the "scl" band which we've determined to be bad data. Currently we filter images with more than 25% of their pixels having bad data. You can use this key to filter the dataset using a different threshold.
 
 #### Annotations
 
